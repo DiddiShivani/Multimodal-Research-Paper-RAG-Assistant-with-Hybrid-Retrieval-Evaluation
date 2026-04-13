@@ -1,0 +1,54 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Research Paper Multimodal RAG Assistant — requirements.txt
+# Install:  pip install -r requirements.txt
+#
+# System prerequisites (Ubuntu / Debian):
+#   sudo apt-get install -y poppler-utils tesseract-ocr libmagic1
+# macOS:
+#   brew install poppler tesseract libmagic
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Streamlit UI ──────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+
+# ── LangChain ecosystem ───────────────────────────────────────────────────────
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-community>=0.2.0
+langchain-groq>=0.1.6
+langchain-huggingface>=0.0.3
+
+# ── Vector store ──────────────────────────────────────────────────────────────
+faiss-cpu>=1.7.4
+
+# ── BM25 keyword retriever ────────────────────────────────────────────────────
+rank_bm25>=0.2.2
+
+# ── Cross-encoder re-ranker + embeddings ─────────────────────────────────────
+sentence-transformers>=2.7.0
+huggingface-hub>=0.23.0
+transformers>=4.40.0
+
+# ── PDF partitioning (unstructured.io) ───────────────────────────────────────
+unstructured[pdf]>=0.14.0
+unstructured-inference>=0.7.0
+pdfminer.six>=20221105
+pdf2image>=1.17.0            # wraps poppler
+pytesseract>=0.3.10          # wraps Tesseract OCR
+Pillow>=10.0.0
+python-magic>=0.4.27
+
+# ── RAGAS evaluation ──────────────────────────────────────────────────────────
+ragas>=0.1.14
+datasets>=2.19.0
+
+# ── Groq Python SDK ───────────────────────────────────────────────────────────
+groq>=0.9.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+numpy>=1.26.0
+pandas>=2.0.0
+sqlalchemy>=2.0.0            # for SQLRecordManager
+aiohttp>=3.9.0               # async HTTP (used by some loaders)
+tiktoken>=0.7.0              # token counting

@@ -1,0 +1,32 @@
+# 🔐 Secrets
+.env
+
+# 🐍 Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 📦 Virtual Environment
+.venv/
+venv/
+
+# 🗄️ Local DB / Cache
+*.db
+record_manager_cache.db
+
+# 📁 OS / IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 📊 Logs
+*.log
+
+# 🧪 Temporary files
+*.tmp
+*.temp
+
+# 📂 Unstructured outputs (images, temp data)
+figures/
