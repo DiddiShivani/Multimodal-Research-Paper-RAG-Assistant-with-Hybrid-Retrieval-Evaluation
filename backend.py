@@ -64,9 +64,7 @@ logger = logging.getLogger(__name__)
 # Constants
 # ─────────────────────────────────────────────────────────────────────────────
 DEFAULT_EMBED_MODEL    = "BAAI/bge-small-en-v1.5"
-# Change this from llama-3-70b-8192 to:
 DEFAULT_TEXT_LLM       = "llama-3.3-70b-versatile" 
-# Ensure this vision model is correct:
 DEFAULT_VISION_LLM     = "llama-3.2-11b-vision-preview"
 DEFAULT_RERANKER       = "BAAI/bge-reranker-base"
 RECORD_MANAGER_DB       = "sqlite:///record_manager_cache.db"

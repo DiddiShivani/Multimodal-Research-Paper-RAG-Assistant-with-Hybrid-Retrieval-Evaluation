@@ -20,7 +20,7 @@ A production-grade **Retrieval-Augmented Generation** system for academic papers
 │  ① INGEST                                                        │
 │     unstructured.io partition_pdf()                              │
 │       ├── Text  →  as-is                                         │
-│       ├── Tables → Groq llama3-70b summarise HTML                │
+│       ├── Tables → Groq llama-3.3-70b-versatile summarise HTML                │
 │       └── Images → Groq llama-3.2-11b-vision describe figure     │
 │                                                                  │
 │  ② INDEX  (LangChain Indexing API)                               │
@@ -33,7 +33,7 @@ A production-grade **Retrieval-Augmented Generation** system for academic papers
 │     CrossEncoder(BAAI/bge-reranker-base) → Top-K reranked docs   │
 │                                                                  │
 │  ④ GENERATE                                                      │
-│     ChatGroq(llama3-70b) + citation prompt                       │
+│     ChatGroq(llama-3.3-70b-versatile) + citation prompt                       │
 │     Inline [Source N] refs + ## Sources section                  │
 │                                                                  │
 │  ⑤ EVALUATE  (RAGAS)                                             │
@@ -47,7 +47,7 @@ A production-grade **Retrieval-Augmented Generation** system for academic papers
 
 | Component | Technology |
 |---|---|
-| **LLM** | `ChatGroq` — `llama3-70b-8192` (text), `llama-3.2-11b-vision-preview` (images) |
+| **LLM** | `ChatGroq` — `llama-3.3-70b-versatile` (text), `llama-3.2-11b-vision-preview` (images) |
 | **Embeddings** | `HuggingFaceEmbeddings` — `BAAI/bge-small-en-v1.5` |
 | **PDF Parsing** | `unstructured[pdf]` with table inference & image extraction |
 | **Vector Store** | `FAISS` (dense retrieval) |
